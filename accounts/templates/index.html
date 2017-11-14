@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>Hello World</h1>
+    
+    <ul>
+        {% if request.user.is_authenticated %}
+        <li><a href="/logout">Logout</a></li>
+        {% else %}
+        <li><a href="/login">Login</a></li>
+        <li><a href="#">Register</a></li>
+        {% endif %}
+    </ul>
 </body>
 </html>
